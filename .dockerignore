@@ -1,0 +1,27 @@
+# Ignore node_modules
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Ignore logs
+logs
+*.log
+yarn-debug.log*
+.yarn-integrity
+
+# Ignore local development environment files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Ignore build output
+dist
+build
+
+# Ignore OS-specific files
+.DS_Store
+
+# Ignore temporary files
+tmp
+temp
