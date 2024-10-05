@@ -157,7 +157,7 @@ export const Post = (data: ILoanPost) => {
         <InputField
           id="amount"
           type="number"
-          label="amount"
+          label="Your Proposed Interest Rate"
           onChange={(e) =>
             setLoanBidData({ ...loanBidData, amount: +e.target.value })
           }
