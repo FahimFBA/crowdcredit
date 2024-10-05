@@ -147,7 +147,7 @@ export const Post = (data: ILoanPost) => {
           modalState: bidModal,
           setModalState: (state: boolean) => setBidModal(state),
         }}
-        confirmButtonText="Contribute"
+        confirmButtonText="Place Your Bid For This Loan Request Post"
         onConfirm={handleBidPostFn}
         status={{
           isLoading: isBidding!,
