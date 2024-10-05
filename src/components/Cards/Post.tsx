@@ -161,7 +161,7 @@ export const Post = (data: ILoanPost) => {
           onChange={(e) =>
             setLoanBidData({ ...loanBidData, amount: +e.target.value })
           }
-          placeholder="Enter amount"
+          placeholder="Enter Amount"
           value={loanBidData.amount}
           required
         />
