@@ -119,7 +119,7 @@ export const Crowdfunding = withTemplate(({ reduxState }) => {
           isLoading={isCreatingCrowdFundingProject}
           trigger={
             <Button variant="outline" className="mb-4">
-              Create Project
+              Create A New Crowdfunding Project
             </Button>
           }
           buttonText="Create Project"
