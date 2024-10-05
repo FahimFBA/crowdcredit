@@ -1,11 +1,12 @@
 import { createApi, fakeBaseQuery } from "@reduxjs/toolkit/query/react";
 import { supabase } from "../../config/supabase.config";
-import { IUserAuth } from "@/types/interface";
+import { IProfileData, IUserAuth } from "@/types/interface";
 import {
   AuthError,
   AuthResponse,
   AuthTokenResponsePassword,
 } from "@supabase/supabase-js";
+import { profileCreationInitialState } from "../InitialStates";
 
 const supabaseUsersTableName = "users";
 // i built this using the sql editor in supabase 👇
@@ -32,6 +33,29 @@ export const userAuthAPI = createApi({
         }
       },
       invalidatesTags: ["User"],
+    }),
+    getOneProfileData: builder.query<IProfileData, string>({
+      queryFn: async (id) => {
+        try {
+          const { data, error } = await supabase
+            .from(supabaseUsersTableName)
+            .select("*")
+            .eq("id", id)
+            .single();
+
+          if (error) {
+            throw new Error(error.message);
+          }
+
+          return {
+            data: data?.data,
+          };
+        } catch (err) {
+          return {
+            error: (err as Error)?.message,
+          };
+        }
+      },
     }),
     sendEmailLinkSignin: builder.mutation<string, Pick<IUserAuth, "email">>({
       queryFn: async ({ email }) => {
@@ -78,6 +102,7 @@ export const userAuthAPI = createApi({
             password,
             options: {
               emailRedirectTo: `${import.meta.env.VITE_APP_DOMAIN_URL}/login`,
+              data: profileCreationInitialState,
             },
           });
 
@@ -208,6 +233,53 @@ export const userAuthAPI = createApi({
       invalidatesTags: ["User"],
     }),
 
+    getUserProfileDetails: builder.query<IProfileData, void>({
+      queryFn: async () => {
+        try {
+          const { data, error } = await supabase.auth.getUser();
+          if (error) {
+            throw new Error(error.message);
+          }
+          return {
+            data: data?.user?.user_metadata as IProfileData,
+          };
+        } catch (err) {
+          return {
+            error: (err as Error)?.message,
+          };
+        }
+      },
+      providesTags: ["User"],
+    }),
+
+    updateUserProfileDetails: builder.mutation<
+      void,
+      {
+        data: IProfileData;
+      }
+    >({
+      queryFn: async ({ data }) => {
+        try {
+          const { error } = await supabase.auth.updateUser({
+            data,
+          });
+
+          if (error) {
+            throw new Error(error.message);
+          }
+
+          return {
+            data: undefined,
+          };
+        } catch (err) {
+          return {
+            error: (err as Error)?.message,
+          };
+        }
+      },
+      invalidatesTags: ["User"],
+    }),
+
     // Upload profile picture image
     uploadProfilePicture: builder.mutation<
       string,
@@ -284,4 +356,7 @@ export const {
   useUploadProfilePictureMutation,
   useRemoveProfilePictureMutation,
   useEmailSignupMutation,
+  useGetUserProfileDetailsQuery,
+  useUpdateUserProfileDetailsMutation,
+  useGetOneProfileDataQuery,
 } = userAuthAPI;
