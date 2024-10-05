@@ -1,16 +1,10 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { useAuthStateChange } from "./_Hooks/useAuthStateChange";
+import { allPageRoutes } from "./pages";
 
-function App() {
-  const [count, setCount] = useState(0);
-
-  return (
-    <>
-      <h1>CrowdCredit</h1>
-    </>
-  );
-}
+const App = () => {
+  useAuthStateChange();
+  return <RouterProvider router={createBrowserRouter(allPageRoutes)} />;
+};
 
 export default App;
