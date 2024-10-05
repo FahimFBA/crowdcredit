@@ -5,7 +5,7 @@ import { RxMoon } from "react-icons/rx";
 import { NavItems } from "./Items";
 import { MobileSideBar } from "./MobileSideBar";
 import { useTheme } from "@/_Hooks/useTheme";
-import { ILayoutHOCProps } from "@/Pages";
+import { ILayoutHOCProps } from "@/pages";
 
 export const Navbar = ({ reduxState }: ILayoutHOCProps) => {
   const { toggleTheme } = useTheme();

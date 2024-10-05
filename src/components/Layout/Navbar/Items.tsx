@@ -3,7 +3,7 @@ import { AuthenticatedNavOptions, NavOptions } from "./NavOptions";
 import { RxBackpack } from "react-icons/rx";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
-import { ILayoutHOCProps } from "@/pages/_types";
+import { ILayoutHOCProps } from "@/pages";
 import { useLogoutMutation } from "@/store";
 
 export const LinkItem = ({ path, label, onClick }: INavbarOptions) => {
