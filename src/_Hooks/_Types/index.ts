@@ -1,13 +1,31 @@
-import path from "path";
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react-swc";
+export interface IUseControlledStateProps {
+  controlledState?: boolean;
+  onStateChange?: (state: boolean) => void;
+}
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
-  },
-});
+export interface ElementPixelDetailsType {
+  marginTop: number;
+  marginRight: number;
+  marginBottom: number;
+  marginLeft: number;
+
+  paddingTop: number;
+  paddingRight: number;
+  paddingBottom: number;
+  paddingLeft: number;
+
+  marginTopAndBottom: number;
+  marginLeftAndRight: number;
+  paddingTopAndBottom: number;
+  paddingLeftAndRight: number;
+  marginTotal: number;
+  paddingTotal: number;
+
+  // main element height
+  elementHeight: number;
+}
+
+export type ElementConfig = {
+  id: string;
+  include?: ("height" | "margin" | "padding")[];
+};

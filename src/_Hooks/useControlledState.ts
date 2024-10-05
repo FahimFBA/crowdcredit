@@ -17,7 +17,7 @@ export const useControlledState = ({
 
   const handleStateChange = useCallback(
     (newState: boolean) => {
-      onStateChange ? onStateChange(newState) : setLocalState(newState);
+      return onStateChange ? onStateChange(newState) : setLocalState(newState);
     },
     [onStateChange],
   );
