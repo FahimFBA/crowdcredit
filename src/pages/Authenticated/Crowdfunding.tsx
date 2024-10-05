@@ -107,7 +107,7 @@ export const Crowdfunding = withTemplate(({ reduxState }) => {
   return (
     <div className="mb-10">
       <div className="flex flex-col items-center">
-        <h1 className="text-xl mb-4 font-bold capitalize">Crowd Funding</h1>
+        <h1 className="text-xl mb-4 font-bold capitalize">Crowdfunding</h1>
         <CrowdFundingSheet
           title="Create Crowd Funding Project"
           description="Please fill in the details to create a new crowd funding project"
@@ -119,7 +119,7 @@ export const Crowdfunding = withTemplate(({ reduxState }) => {
           isLoading={isCreatingCrowdFundingProject}
           trigger={
             <Button variant="outline" className="mb-4">
-              Create Project
+              Create A New Crowdfunding Project
             </Button>
           }
           buttonText="Create Project"

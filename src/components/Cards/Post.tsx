@@ -147,7 +147,7 @@ export const Post = (data: ILoanPost) => {
           modalState: bidModal,
           setModalState: (state: boolean) => setBidModal(state),
         }}
-        confirmButtonText="Contribute"
+        confirmButtonText="Place Your Bid For This Loan Request Post"
         onConfirm={handleBidPostFn}
         status={{
           isLoading: isBidding!,
@@ -157,11 +157,11 @@ export const Post = (data: ILoanPost) => {
         <InputField
           id="amount"
           type="number"
-          label="amount"
+          label="Your Proposed Interest Rate"
           onChange={(e) =>
             setLoanBidData({ ...loanBidData, amount: +e.target.value })
           }
-          placeholder="Enter amount"
+          placeholder="Enter Amount"
           value={loanBidData.amount}
           required
         />

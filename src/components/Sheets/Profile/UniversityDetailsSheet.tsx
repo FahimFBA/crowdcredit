@@ -39,7 +39,7 @@ export const UniversityDetailsSheet = ({
         />
         <InputField
           id="batch"
-          placeholder="Batch Year"
+          placeholder="Batch"
           type="text"
           label="Batch"
           value={data?.batch}

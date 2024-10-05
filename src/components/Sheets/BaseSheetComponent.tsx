@@ -40,7 +40,7 @@ export const BaseSheetComponent = ({
           <SheetFooter>
             <SheetClose>
               <Button variant="link" size="sm" type="button">
-                cancel
+                Cancel
               </Button>
             </SheetClose>
             {isLoading ? (
