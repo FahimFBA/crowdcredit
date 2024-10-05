@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/Layout";
 import { RootState, useAppSelector } from "@/store";
 import { ComponentType, FC } from "react";
-import { ILayoutHOCProps } from "../_types";
+import { ILayoutHOCProps } from "../types";
 import { cn } from "@/lib/utils";
 import { containerDefinition } from "@/_Variables";
 
