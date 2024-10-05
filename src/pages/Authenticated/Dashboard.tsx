@@ -65,7 +65,7 @@ export const Dashboard = withTemplate(({ reduxState }) => {
           setSheetState={setSheetState}
           trigger={
             <Button variant="outline" className="mb-4" size="sm">
-              Create Loan Request
+              Create Loan Request Post
             </Button>
           }
           buttonText="Create"
