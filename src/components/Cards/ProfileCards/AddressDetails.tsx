@@ -72,7 +72,7 @@ export const AddressDetails = ({
               <TableCell className="text-right">{data?.address}</TableCell>
             </TableRow>
             <TableRow>
-              <TableCell className="font-medium">city</TableCell>
+              <TableCell className="font-medium">City</TableCell>
               <TableCell className="text-right">{data?.city}</TableCell>
             </TableRow>
             <TableRow>
