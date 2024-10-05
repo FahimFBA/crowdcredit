@@ -39,6 +39,7 @@ export const persistedStore = persistStore(store);
 
 setupListeners(store.dispatch);
 
+// Infer the type of makeStore
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
 export type AppStore = typeof store;

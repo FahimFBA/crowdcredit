@@ -12,8 +12,10 @@ import {
 } from "@/components/ui/table";
 import { useGetOneCrowdFundingProjectQuery } from "@/store";
 import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-export const CrowdfundingDetails = withTemplate(({}) => {
+export const CrowdfundingDetails = withTemplate(() => {
+  const navigate = useNavigate();
   const params = useParams<{ id: string }>();
 
   const { data, isLoading, isFetching, isError } =
@@ -87,7 +89,11 @@ export const CrowdfundingDetails = withTemplate(({}) => {
                 crowd_funding_post_id,
                 contributor_id,
               }) => (
-                <TableRow key={crowd_funding_post_id}>
+                <TableRow
+                  key={crowd_funding_post_id}
+                  onClick={() => navigate(`/profile/` + contributor_id)}
+                  className="cursor-pointer"
+                >
                   <TableCell className="font-medium">
                     $ {contributor_id}
                   </TableCell>
