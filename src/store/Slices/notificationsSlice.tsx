@@ -1,6 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { userAuthAPI } from "../API/userAuthAPI";
 import { toast } from "sonner";
+// import ReactGA from "react-ga4";
+
+// const handleButtonClick = () => {
+//   ReactGA.event({
+//     category: "User",
+//     action: "Clicked Button",
+//     label: "Homepage Button",
+//   });
+// };
 
 type ToastType = "loading" | "success" | "error" | "info" | "message"; // Add other types as needed
 
