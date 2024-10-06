@@ -5,7 +5,7 @@ import {
   TableBody,
   TableCaption,
   TableCell,
-  TableFooter,
+  // TableFooter,
   TableHead,
   TableHeader,
   TableRow,
@@ -54,7 +54,7 @@ export const LoanPostDetails = withTemplate(() => {
           <TableRow>
             <TableHead>Bidder ID</TableHead>
             <TableHead>Bid At</TableHead>
-            <TableHead className="text-right">Amount</TableHead>
+            <TableHead className="text-right">Proposed Interest Rate</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -82,7 +82,7 @@ export const LoanPostDetails = withTemplate(() => {
               </TableRow>
             ))}
         </TableBody>
-        {bidders?.length !== 0 && (
+        {/* {bidders?.length !== 0 && (
           <TableFooter>
             <TableRow>
               <TableCell colSpan={2}>Total</TableCell>
@@ -94,7 +94,7 @@ export const LoanPostDetails = withTemplate(() => {
               </TableCell>
             </TableRow>
           </TableFooter>
-        )}
+        )} */}
       </Table>
     </div>
   );
