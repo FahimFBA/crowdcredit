@@ -82,7 +82,7 @@ export const LoanPostDetails = withTemplate(() => {
               </TableRow>
             ))}
         </TableBody>
-        {bidders?.length !== 0 && (
+        {/* {bidders?.length !== 0 && (
           <TableFooter>
             <TableRow>
               <TableCell colSpan={2}>Total</TableCell>
@@ -94,7 +94,7 @@ export const LoanPostDetails = withTemplate(() => {
               </TableCell>
             </TableRow>
           </TableFooter>
-        )}
+        )} */}
       </Table>
     </div>
   );
