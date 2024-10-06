@@ -58,7 +58,7 @@ export const CrowdfundingDetails = withTemplate(() => {
         </p>
       </div>
       <h3 className="text-center mb-6 font-semibold text-lg underline">
-        Target: ${target_amount}
+        Target: ৳ {target_amount}
       </h3>
       <Table>
         <TableCaption>A list of all contributors</TableCaption>
@@ -95,10 +95,10 @@ export const CrowdfundingDetails = withTemplate(() => {
                   className="cursor-pointer"
                 >
                   <TableCell className="font-medium">
-                    $ {contributor_id}
+                    {contributor_id}
                   </TableCell>
                   <TableCell>{contributed_at.toString()}</TableCell>
-                  <TableCell className="text-right">$ {amount}</TableCell>
+                  <TableCell className="text-right">৳ {amount}</TableCell>
                 </TableRow>
               ),
             )}
@@ -108,7 +108,7 @@ export const CrowdfundingDetails = withTemplate(() => {
             <TableRow>
               <TableCell colSpan={2}>Total</TableCell>
               <TableCell className="text-right">
-                ${" "}
+                ৳{" "}
                 {data?.contributions
                   ?.map((item) => item?.amount)
                   ?.reduce((a, b) => a + b, 0)}

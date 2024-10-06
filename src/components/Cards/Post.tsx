@@ -89,7 +89,7 @@ export const Post = (data: ILoanPost) => {
         <CardTitle className="capitalize">{loan_purpose}</CardTitle>
       </CardHeader>
       <CardFooter className="flex justify-between items-center">
-        <div className="font-semibold">$ {loan_amount}</div>
+        <div className="font-semibold">৳ {loan_amount}</div>
         <div className="flex gap-2">
           {!isAuthor && (
             <Button size="sm" onClick={() => setBidModal(true)}>

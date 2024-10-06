@@ -125,7 +125,7 @@ export const CrowdFundingPost = ({
       <CardFooter className="flex flex-col items-end gap-3">
         <div className="w-full flex flex-col gap-1.5">
           <div className="text-center text-muted-foreground font-semibold">
-            ${currentAmount} / ${targetAmount}
+            ৳{currentAmount} / ৳{targetAmount}
           </div>
           <Progress value={(currentAmount! / targetAmount!) * 100} />
           <p className="text-muted-foreground text-center text-sm">
