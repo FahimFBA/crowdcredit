@@ -46,7 +46,7 @@ export const LoanPostDetails = withTemplate(() => {
         </p>
       </div>
       <h3 className="text-center mb-6 font-semibold text-lg underline">
-        Target: ${loan_amount}
+        Target: {loan_amount} ৳
       </h3>
       <Table>
         <TableCaption>A list of all Bidders</TableCaption>
@@ -76,9 +76,9 @@ export const LoanPostDetails = withTemplate(() => {
                 onClick={() => navigate(`/profile/` + bidder_id)}
                 className="cursor-pointer"
               >
-                <TableCell className="font-medium">$ {bidder_id}</TableCell>
+                <TableCell className="font-medium">{bidder_id}</TableCell>
                 <TableCell>{created_at}</TableCell>
-                <TableCell className="text-right">$ {amount}</TableCell>
+                <TableCell className="text-right">{amount} ৳</TableCell>
               </TableRow>
             ))}
         </TableBody>
