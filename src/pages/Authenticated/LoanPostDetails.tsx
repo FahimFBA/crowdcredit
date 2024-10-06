@@ -54,7 +54,7 @@ export const LoanPostDetails = withTemplate(() => {
           <TableRow>
             <TableHead>Bidder ID</TableHead>
             <TableHead>Bid At</TableHead>
-            <TableHead className="text-right">Amount</TableHead>
+            <TableHead className="text-right">Proposed Interest Rate</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
