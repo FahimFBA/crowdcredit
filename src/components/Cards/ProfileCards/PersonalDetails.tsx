@@ -62,7 +62,7 @@ export const PersonalDetails = ({
           <TableHeader>
             <TableRow>
               <TableHead>Property</TableHead>
-              <TableHead className="text-right">Amount</TableHead>
+              <TableHead className="text-right">Value</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
