@@ -93,6 +93,26 @@ src/
 - Status tracking
 - Document management
 
+## 📸 Screenshots
+
+### Homepage
+![Homepage](img/homepage.png)
+
+### Logged In Dashboard
+![Logged In Dashboard](img/logged-in-page.png)
+
+### Crowdfunding Page
+![Crowdfunding Page](img/crowdfunding-page.png)
+
+### Create Crowdfunding Project
+![Create Crowdfunding Project](img/create-crowdfunding-project.png)
+
+### Loan Page
+![Loan Page](img/loan-page.png)
+
+### Create Loan Project
+![Create Loan Project](img/create-loan-project.png)
+
 ## 🧩 Components
 
 ### Cards
